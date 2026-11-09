@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DM Online</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Adventure Portal</p>
+          <h1>DM Online</h1>
+        </div>
+        <div class="header-actions">
+          <button id="new-game" class="secondary-btn">New Game</button>
+          <button id="save-game" class="primary-btn">Save</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel hero-panel">
+          <div class="panel-header">
+            <h2>Hero</h2>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <label>Player</label>
+              <h3 id="player-name">Aster</h3>
+            </div>
+            <div>
+              <label>Class</label>
+              <h3 id="player-class">Warrior</h3>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-box">
+              <span>HP</span>
+              <strong id="hp-value">0</strong>
+            </div>
+            <div class="stat-box">
+              <span>Mana</span>
+              <strong id="mana-value">0</strong>
+            </div>
+            <div class="stat-box">
+              <span>ATK</span>
+              <strong id="attack-value">0</strong>
+            </div>
+            <div class="stat-box">
+              <span>Gold</span>
+              <strong id="gold-value">0</strong>
+            </div>
+            <div class="stat-box">
+              <span>Level</span>
+              <strong id="level-value">0</strong>
+            </div>
+            <div class="stat-box">
+              <span>XP</span>
+              <strong id="xp-value">0</strong>
+            </div>
+          </div>
+
+          <div class="class-picker">
+            <h3>Choose Class</h3>
+            <div class="class-buttons">
+              <button class="class-btn selected" data-class="Warrior">Warrior</button>
+              <button class="class-btn" data-class="Mage">Mage</button>
+              <button class="class-btn" data-class="Rogue">Rogue</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel battle-panel">
+          <div class="panel-header">
+            <h2>Battlefield</h2>
+          </div>
+
+          <div class="enemy-card">
+            <div class="enemy-head">
+              <div>
+                <p class="eyebrow">Enemy</p>
+                <h3 id="enemy-name">Shadow Wolf</h3>
+              </div>
+              <div class="enemy-rank" id="enemy-rank">Lv.1</div>
+            </div>
+
+            <div class="health-wrap">
+              <div class="health-bar">
+                <span id="enemy-health-bar"></span>
+              </div>
+              <strong id="enemy-health-text">0 / 0</strong>
+            </div>
+
+            <div class="enemy-info" id="enemy-info"></div>
+          </div>
+
+          <div class="action-grid">
+            <button id="attack-btn" class="action-btn">Attack</button>
+            <button id="skill-btn" class="action-btn">Skill</button>
+            <button id="heal-btn" class="action-btn">Heal</button>
+            <button id="explore-btn" class="action-btn alt">Explore</button>
+          </div>
+        </section>
+
+        <section class="panel log-panel">
+          <div class="panel-header">
+            <h2>Battle Log</h2>
+          </div>
+          <ul id="log-list"></ul>
+        </section>
+
+        <section class="panel inventory-panel">
+          <div class="panel-header">
+            <h2>Inventory</h2>
+          </div>
+          <ul id="inventory-list"></ul>
+        </section>
+
+        <section class="panel quest-panel">
+          <div class="panel-header">
+            <h2>Quest</h2>
+          </div>
+          <p id="quest-text">Defeat 3 enemies to earn the Rusted Crown.</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
